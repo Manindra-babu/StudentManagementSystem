@@ -10,10 +10,10 @@
     "build:frontend": "npm run build --workspace=frontend",
     "build": "npm run build:backend && npm run build:frontend",
     "start": "npm run start --workspace=backend",
-    "postinstall": "npm run prisma:generate --workspace=backend",
-    "db:setup": "npx prisma db push --workspace=backend --accept-data-loss && npm run prisma:seed --workspace=backend",
-    "prisma:generate": "npm run prisma:generate --workspace=backend",
-    "prisma:migrate": "npm run prisma:migrate --workspace=backend",
+    "postinstall": "npx prisma generate --schema=backend/prisma/schema.prisma",
+    "db:setup": "npx prisma db push --schema=backend/prisma/schema.prisma --accept-data-loss && npm run prisma:seed --workspace=backend",
+    "prisma:generate": "npx prisma generate --schema=backend/prisma/schema.prisma",
+    "prisma:migrate": "npx prisma migrate dev --schema=backend/prisma/schema.prisma",
     "prisma:seed": "npm run prisma:seed --workspace=backend"
   },
   "workspaces": [
@@ -21,6 +21,7 @@
     "frontend"
   ],
   "devDependencies": {
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "dotenv-cli": "^7.4.2"
   }
 }
