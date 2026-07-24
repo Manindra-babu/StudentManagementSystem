@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
-import { GraduationCap, Shield, User, ArrowRight, Loader2 } from 'lucide-react';
+import { Shield, User, ArrowRight, Loader2, GraduationCap } from 'lucide-react';
+import { Logo } from '../components/Logo';
 
 const Login: React.FC = () => {
   const { login } = useAuth();
@@ -40,14 +41,9 @@ const Login: React.FC = () => {
       <div className="w-full max-w-md relative z-10">
         {/* Brand Header */}
         <div className="flex flex-col items-center mb-8">
-          <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-primary-600 to-accent-500 flex items-center justify-center shadow-lg shadow-primary-200 mb-3">
-            <GraduationCap className="w-8 h-8 text-white" />
-          </div>
-          <h1 className="text-3xl font-extrabold font-outfit tracking-tight text-slate-900">
-            Academix
-          </h1>
-          <p className="text-sm font-medium text-slate-500 mt-1">
-            Next-Generation Student Management
+          <Logo size={64} className="mb-2" />
+          <p className="text-xs font-semibold text-slate-400">
+            Next-Generation Student Management System
           </p>
         </div>
 

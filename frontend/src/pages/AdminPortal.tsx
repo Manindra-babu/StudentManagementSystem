@@ -11,6 +11,7 @@ import {
   UserPlus, BookPlus, RefreshCw, Layers
 } from 'lucide-react';
 import { ChatWidget } from '../components/ChatWidget';
+import { Logo } from '../components/Logo';
 
 const COLORS = ['#8b5cf6', '#3b82f6', '#10b981', '#f59e0b', '#ef4444'];
 
@@ -262,14 +263,8 @@ const AdminPortal: React.FC = () => {
 
       {/* Admin Sidebar */}
       <aside className="w-64 bg-white border-r border-slate-200 flex flex-col shrink-0">
-        <div className="p-6 border-b border-slate-100 flex items-center gap-3">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-primary-600 to-accent-500 flex items-center justify-center shadow-md">
-            <ShieldAlert className="w-5 h-5 text-white" />
-          </div>
-          <div>
-            <h2 className="font-bold text-slate-900 font-outfit text-md leading-none">Academix</h2>
-            <span className="text-[10px] font-bold text-primary-600 uppercase tracking-widest mt-1 block">Admin Console</span>
-          </div>
+        <div className="p-5 border-b border-slate-100">
+          <Logo size={38} />
         </div>
 
         <nav className="flex-1 p-4 space-y-1">
