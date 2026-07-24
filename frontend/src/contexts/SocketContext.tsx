@@ -12,7 +12,9 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     if (token) {
       const newSocket = io('', {
         path: '/socket.io',
-        transports: ['websocket', 'polling']
+        transports: ['polling', 'websocket'],
+        reconnectionAttempts: 5,
+        reconnectionDelay: 2000
       });
       setSocket(newSocket);
 
