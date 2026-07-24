@@ -14,4 +14,3 @@ services:
         generateValue: true
       - key: GROQ_API_KEY
         sync: false
-
