@@ -1,0 +1,98 @@
+import React from 'react';
+
+interface LogoProps {
+  className?: string;
+  size?: number;
+}
+
+export const Logo: React.FC<LogoProps> = ({ className = '', size = 36 }) => {
+  return (
+    <div className={`inline-flex items-center gap-2.5 ${className}`}>
+      <svg
+        width={size}
+        height={size}
+        viewBox="0 0 120 120"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="shrink-0 drop-shadow-sm"
+      >
+        {/* Background Lightbulb Glow Rays */}
+        <path d="M 28 35 L 22 28" stroke="#F59E0B" strokeWidth="4" strokeLinecap="round" />
+        <path d="M 38 24 L 38 15" stroke="#F59E0B" strokeWidth="4" strokeLinecap="round" />
+        <path d="M 52 30 L 60 22" stroke="#F59E0B" strokeWidth="4" strokeLinecap="round" />
+        <path d="M 18 45 L 10 43" stroke="#F59E0B" strokeWidth="4" strokeLinecap="round" />
+        <path d="M 50 45 L 58 45" stroke="#F59E0B" strokeWidth="4" strokeLinecap="round" />
+
+        {/* Lightbulb */}
+        <path
+          d="M 38 28 C 29 28 22 35 22 44 C 22 50 25 55 29 58 L 29 64 C 29 66 31 68 33 68 L 43 68 C 45 68 47 66 47 64 L 47 58 C 51 55 54 50 54 44 C 54 35 47 28 38 28 Z"
+          fill="#FBBF24"
+          stroke="#1E293B"
+          strokeWidth="3.5"
+          strokeLinejoin="round"
+        />
+        <path d="M 31 68 L 45 68" stroke="#1E293B" strokeWidth="3.5" strokeLinecap="round" />
+        <path d="M 33 73 L 43 73" stroke="#94A3B8" strokeWidth="3" strokeLinecap="round" />
+        <path d="M 35 34 C 32 37 31 41 32 45" stroke="#FFF" strokeWidth="3" strokeLinecap="round" />
+
+        {/* Stack of Books */}
+        {/* Bottom Book (Teal) */}
+        <rect x="42" y="90" width="70" height="14" rx="3" fill="#0D9488" stroke="#1E293B" strokeWidth="3.5" />
+        <rect x="47" y="93" width="60" height="8" rx="1" fill="#F8FAFC" />
+        <path d="M 98 90 L 98 104" stroke="#F59E0B" strokeWidth="4" />
+
+        {/* Middle-Bottom Book (Rose/Red) */}
+        <rect x="44" y="74" width="66" height="14" rx="3" fill="#E11D48" stroke="#1E293B" strokeWidth="3.5" />
+        <rect x="49" y="77" width="56" height="8" rx="1" fill="#FEF2F2" />
+
+        {/* Middle Book (Dark Blue) */}
+        <rect x="40" y="58" width="72" height="14" rx="3" fill="#1E3A8A" stroke="#1E293B" strokeWidth="3.5" />
+        <rect x="45" y="61" width="62" height="8" rx="1" fill="#F8FAFC" />
+
+        {/* Top Book (Plum/Dark) */}
+        <rect x="46" y="42" width="62" height="14" rx="3" fill="#475569" stroke="#1E293B" strokeWidth="3.5" />
+        <rect x="51" y="45" width="52" height="8" rx="1" fill="#FEF3C7" />
+
+        {/* Graduation Cap */}
+        {/* Cap Base Ring */}
+        <path d="M 62 40 C 62 45 92 45 92 40 C 92 36 62 36 62 40 Z" fill="#F59E0B" />
+        {/* Cap Crown Diamond */}
+        <path
+          d="M 77 18 L 115 32 L 77 44 L 39 32 Z"
+          fill="#1E293B"
+          stroke="#0F172A"
+          strokeWidth="3.5"
+          strokeLinejoin="round"
+        />
+        <path d="M 77 22 L 107 32 L 77 41 L 47 32 Z" fill="#334155" />
+        {/* Cap Tassel */}
+        <path d="M 77 31 L 110 44 L 110 58" stroke="#D97706" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="110" cy="60" r="3.5" fill="#D97706" />
+
+        {/* Red Pencil */}
+        <g transform="translate(12, 68) rotate(-40)">
+          {/* Eraser */}
+          <rect x="0" y="0" width="12" height="10" rx="2" fill="#E2E8F0" stroke="#1E293B" strokeWidth="2.5" />
+          <rect x="0" y="8" width="12" height="4" fill="#94A3B8" />
+          {/* Pencil Body */}
+          <rect x="0" y="12" width="12" height="28" fill="#DC2626" stroke="#1E293B" strokeWidth="2.5" />
+          <line x1="4" y1="12" x2="4" y2="40" stroke="#B91C1C" strokeWidth="1.5" />
+          <line x1="8" y1="12" x2="8" y2="40" stroke="#FCA5A5" strokeWidth="1.5" />
+          {/* Tip Wood */}
+          <path d="M 0 40 L 6 52 L 12 40 Z" fill="#FDE68A" stroke="#1E293B" strokeWidth="2.5" strokeLinejoin="round" />
+          {/* Lead Tip */}
+          <path d="M 4 48 L 6 52 L 8 48 Z" fill="#1E293B" />
+        </g>
+      </svg>
+
+      <div className="flex flex-col">
+        <span className="font-black text-slate-900 tracking-tight font-outfit leading-none text-lg">
+          Academix
+        </span>
+        <span className="text-[10px] font-extrabold uppercase tracking-widest text-primary-600 font-sans mt-0.5">
+          Student System
+        </span>
+      </div>
+    </div>
+  );
+};
